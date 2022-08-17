@@ -1,7 +1,10 @@
+<h1>New Restaurant</h1>
 
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%# <%= f.input :rating %> 
+  <%= f.input :category %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "Back to restaurants", restaurants_path %>

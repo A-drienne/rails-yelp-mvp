@@ -24,10 +24,11 @@ puts "... Seeding data ..."
     category: %w[chinese italian japanese french belgian].sample
   )
   puts "Created #{restaurant.name}"
+
+  Review.create(
+    content: Faker::Restaurant.review,
+    rating: rand(0..5),
+    restaurant: restaurant
+  )
 end
 puts "Finito"
-
-# Review.create(
-#   content: Faker::Restaurant.review,
-#   rating: rand(0..5)
-# )
